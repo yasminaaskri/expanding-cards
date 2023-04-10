@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 90vh;
+
+}
+.panel{
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ height: 80vh;
+ cursor: pointer;
+ border-radius: 50px;
+ color: #fff;
+ flex: 0.5;
+ position: relative;
+ margin: 10px;
+ transition: flex 0.7s ease-in ;
+}
+.panel h3{
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    margin: 0px;
+    opacity:0;
+    
+}
+.panel.active{
+    flex: 8;
+    
+}
+.panel.active h3{
+    opacity: 1;
+}
+@media (max-width:480px) {
+    .container{
+        width: 80vh;
+    }
+    .panel.active{
+        flex: 1;
+    }
+    
+}
